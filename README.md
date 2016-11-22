@@ -2,7 +2,23 @@
 Save files of type text, jpeg or json.
 
 
-USAGE:
+USAGE FOR TEXT FILE:
+```swift
+//create the text that will be stored in your file
+let myText = "Some text"
+
+//write to txt file
+let testFile = FileSaveHelper(fileName: "testFile", fileExtension: .TXT, subDirectory: "SavingFiles", directory: .documentDirectory)
+    
+    do {
+      //print the data
+      print(try testFile.getContentsOfFile())
+    } catch {
+      print (error)
+    }
+```
+
+USAGE FOR JSON FILE:
 
 ```swift
 //create an array with your desired dictionary objects
@@ -18,4 +34,20 @@ do {
 catch {
    print(error)
 }
+```
+USAGE FOR IMAGE FILE:
+```swift
+//create the image that will be stored in your file
+let myImage = UIImage(named: "testImage.jpeg")
+
+//write to txt file
+let testFile = FileSaveHelper(fileName: "testFile", fileExtension: .JPEG, subDirectory: "SavingFiles", directory: .documentDirectory)
+    
+    do {
+      //print the data
+      print(try testFile.getImage())
+    } catch {
+      print (error)
+    }
+
 ```
