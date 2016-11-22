@@ -4,7 +4,7 @@ Save files of type text, jpeg or json.
 
 USAGE:
 
-```javascript
+```swift
 //create an array with your desired dictionary objects
 let dic = ["color": "red", "format": "italic", "type": "text"]
         
@@ -15,7 +15,7 @@ do {
    try jsonFile.saveFile(dataForJson: dic as AnyObject)
    print(try jsonFile.getJSONData())
 }
-   catch {
-         print(error)
-   }
+catch {
+   print(error)
+}
 ```
