@@ -38,10 +38,10 @@ catch {
 USAGE FOR IMAGE FILE:
 ```swift
 //create the image that will be stored in your file
-let myImage = UIImage(named: "testImage.jpeg")
+let myImage = UIImage(named: "testImage.jpg")
 
 //write to txt file
-let testFile = FileSaveHelper(fileName: "testFile", fileExtension: .JPEG, subDirectory: "SavingFiles", directory: .documentDirectory)
+let testFile = FileSaveHelper(fileName: "testFile", fileExtension: .JPG, subDirectory: "SavingFiles", directory: .documentDirectory)
     
     do {
       try testFile.saveFile(image: myImage!)
