@@ -44,6 +44,7 @@ let myImage = UIImage(named: "testImage.jpeg")
 let testFile = FileSaveHelper(fileName: "testFile", fileExtension: .JPEG, subDirectory: "SavingFiles", directory: .documentDirectory)
     
     do {
+      try testFile.saveFile(image: myImage!)
       //print the data
       print(try testFile.getImage())
     } catch {
